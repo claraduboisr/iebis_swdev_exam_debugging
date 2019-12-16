@@ -9,14 +9,18 @@ public class Main {
 
         Random random = new Random();
         StringBuffer word = null;
+        word = new StringBuffer('Y');
 
-        switch (random.nextInt(2)) {
+        switch (random.nextInt(3)) {
             case 0:
-                word = new StringBuffer('Y');
+                word.append('Y');
+                break;
             case 1:
-                word = new StringBuffer('F');
+                word.append('F');
+                break;
             case 2:
-                word = new StringBuffer('T');
+                word.append('T');
+                break;
         }
 
         word.append('o');
