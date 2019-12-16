@@ -40,6 +40,12 @@ case 2:
     word.append('T');
     break;
 ```
+4. **Fourth Bug**
+I have found that we can not use "." because in reggex it means to consider all characters. Also I have found another possible solution which would be:
+
+```java
+String formattedEmailAddress = emailAddress.replaceAll("[.]", "/");
+```
 
 ======================================================================
 
