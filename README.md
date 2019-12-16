@@ -46,6 +46,8 @@ I have found that we can not use "." because in reggex it means to consider all 
 ```java
 String formattedEmailAddress = emailAddress.replaceAll("[.]", "/");
 ```
+## Code Debugged
+
 ![Code](https://user-images.githubusercontent.com/42964691/70903312-ead1e580-1ffe-11ea-888e-fba53c43bac8.png)
 
 ======================================================================
