@@ -19,6 +19,28 @@ The problem is that nothing of this is happenning now.
 
 Your goal is to fix the code changing the code as little as possible. Obviously we could make some new code that does the same. But that won't score, the goal here is to fix the actual code and find the bugs.
 
+## Code Debugged
+1. **First Bug**
+The bound of nextInt was 2, but as it is not inclusive (_<2_) it will be just for case 0 and case 1. So i have changed it to 3 the bound.
+```java
+switch (random.nextInt(3)) 
+```
+
+2. **Second Bug**
+Every time the system selected randomly between the cases, it was specified that a new StringBuffer was created. So, a null word was created and when it was word.append('o'), the word did not contain the first letter. So, at the end it will always be "our". 
+```java
+word.append('Y');
+```
+3. **Third Bug**
+* The switch expression needed to have the ```break;```expression. Otherwise, if the system randomly chose "case 0", it will go to "case 1" and to "case 2" afterwards, and within, it will end up appending all the three possible letters ("YFTour"). 
+* If the system chose "case 1" it would be "FTour".
+* However, if the system chose "case 3" randomly, the outcome would seem normal ("Tour").
+```java
+case 2:
+    word.append('T');
+    break;
+```
+
 ======================================================================
 
 # Instructions
